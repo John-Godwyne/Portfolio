@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js" defer></script>
+</head>
+<body>
+    <div class="scanline"></div>
+   <div class="sidebar">
+    <img src="assets/logo.png" alt="Logo" class="logo"/>
+    <p class="sitename"> John Godwyne C. Fontanos Portfolio</p>
+        <nav>
+        <a href="index.html">About Me</a>
+        <a href="project.html">Project</a>
+        <a href="cert.html">Certifications</a>
+        </nav>
+        
+        </div>
+
+    <main class="main"> 
+        <p class="pagelabel">PROJECTS < <</p>
+        <div class="acard" onclick="toggle(this)">
+        <div class="acard-header">
+            <span class="acard-title">Simple Jenga Die Roller</span>
+            <span class="acard-toggle">[+]</span>
+        </div>
+        <div class="acard-body">
+            <p>One of the first projects I made to practice html, css, and javascript. 
+                Initially the idea came from a homebrew rule from my father for a game of Jenga,
+                and I thought to use some of my knowledge of programming to make a simple die roller for it.
+
+                It is not as complex nor impressive, but it did teach me more about what I can do with CSS and JavaScript.
+                <br> <br>
+            <a href="https://github.com/loganyamato/JengaDie" target="_blank"> [ View In Github ]
+            </a>
+            </p>
+            
+            
+            <iframe src="https://loganyamato.github.io/JengaDie/index.html"
+             width="100%" height="500px" scrolling="no"> 
+            </iframe>
+        </div>
+        </div>
+
+        <div class="acard" onclick="toggle(this)">
+        <div class="acard-header">
+            <span class="acard-title">Untitled Project</span>
+            <span class="acard-toggle">[+]</span>
+        </div>
+        <div class="acard-body">
+            <p>Project 1 Description</p>
+        </div>
+        </div>
+        
+    </main>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 8;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(255, 255, 255, 0.2) 10%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    opacity: 0.1;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 4s linear infinite;
+}
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+    80% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+
+@keyframes dnoise {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.85; }
+    75%  { opacity: 1; }
+    85%  { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+.container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+            border: 1px solid #ffce9c;
+            border-collapse: separate;
+            border-spacing: 10px 20px;
+        }
+        
+        a {
+                color: #cc6600;
+                text-decoration: none;
+            }
+
+        a:hover {
+                text-decoration: underline;
+            }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            font-family: IBM Plex Mono, monospace;
+            color: #cc6600;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            background-color: #1a0a00;
+            overflow-y: scroll;    
+            overflow: auto;
+            scrollbar-width: none;  
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.06) 2px,
+                rgba(0,0,0,0.08) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .sidebar { 
+            box-sizing: border-box;
+            width: 155px;
+            background-color: #442711a3;   
+            position: fixed;
+            min-height: 100vh;
+            padding: 10px;
+            
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .main { 
+            flex: 1;
+            margin-left: 160px;
+        }
+        
+
+        .card {
+            border: 1px solid #e8d0b8;
+            padding: 16px;
+            margin: 10px;
+        }
+
+        .card-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: bolder;
+        }
+
+        .sitename {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffc891;
+            animation: dnoise 3s infinite;
+
+        }
+
+        /* Project and Certifications Page Specifics */
+        .acard {
+            border: 1px solid #e8d0b8;
+            padding: 16px;
+            margin: 10px;
+            font-weight: bolder;
+        }
+
+        .acard-header {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        }
+
+        .acard-body {
+            display: none;
+            font-weight: normal;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top:  1px solid #cc6600;
+        }
+
+        .acard.expanded .acard-body {
+            display: block;
+        }
+        
+
+        .acard-body iframe {
+            display: none;
+        }
+
+        .acard.expanded .acard-body iframe {
+            display: block;
+        }
