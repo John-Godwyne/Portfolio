@@ -7,6 +7,10 @@ function toggle(card, event) {
         return;
     }
 
+    if (e) {
+    e.stopPropagation();
+    }
+
     card.classList.toggle('expanded');
     const symbol = card.querySelector(':scope > .acard-header > .acard-toggle');
     if (symbol) {
